@@ -158,7 +158,7 @@ public class WizardAIAttackSpellWithCost extends EntityAIBase {
 		// Allied target
 
 		// Hostile target
-		if (npc.world.rand.nextInt(200) == 0) {
+		if (npc.world.rand.nextInt(200) == 0 && !(npc.getAttackTarget() == null)) {
 			npc.sayWithoutSpam(new TextComponentTranslation(Speech.WIZARD_COMBAT.getRandom(), npc.getAttackTarget().getDisplayName()));
 		}
 
